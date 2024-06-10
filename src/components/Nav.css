@@ -1,0 +1,46 @@
+/* nav 스타일 정의 */
+.nav {
+  position: fixed; /* 네비게이션 바를 고정 위치로 설정 */
+  top: 0; /* 상단에 위치 */
+  width: 100%; /* 너비를 100%로 설정 */
+  height: 30px; /* 높이를 30px로 설정 */
+  z-index: 1; /* 다른 요소들 위에 위치하도록 설정 */
+  padding: 20px; /* 네비게이션 바의 내부 여백 설정 */
+  display: flex; /* 플렉스 박스로 설정하여 내부 요소 배치 */
+  justify-content: space-between; /* 내부 요소를 좌우 끝에 배치 */
+  align-items: center; /* 내부 요소를 수직 가운데에 배치 */
+  transition-timing-function: ease-in; /* 전환 효과를 부드럽게 설정 */
+  transition: all 0.5s; /* 모든 속성에 대해 0.5초 동안 전환 */
+}
+
+/* 스크롤에 따라 네비게이션 바의 배경 색상을 변경 */
+.nav__black {
+  background-color: #111; /* 배경 색상을 어두운 색으로 설정 */
+}
+
+/* 네비게이션 바 로고 스타일 정의 */
+.nav__logo {
+  position: fixed; /* 고정 위치로 설정 */
+  left: 40px; /* 왼쪽에서 40px 떨어진 위치에 배치 */
+  width: 80px; /* 너비를 80px로 설정 */
+  object-fit: contain; /* 이미지 비율을 유지하면서 컨테이너에 맞춤 */
+}
+
+/* 네비게이션 바 아바타 스타일 정의 */
+.nav__avatar {
+  position: fixed; /* 고정 위치로 설정 */
+  right: 40px; /* 오른쪽에서 40px 떨어진 위치에 배치 */
+  width: 30px; /* 너비를 30px로 설정 */
+  object-fit: contain; /* 이미지 비율을 유지하면서 컨테이너에 맞춤 */
+}
+
+.nav_input {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: rgba(0, 0, 0, 0.499);
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  border: none;
+}

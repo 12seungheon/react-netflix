@@ -1,0 +1,132 @@
+/* 기본 배너 스타일 */
+.banner {
+  color: white; /* 글자 색상을 흰색으로 설정 */
+  object-fit: contain; /* 이미지의 비율을 유지하면서 컨테이너에 맞춤 */
+  height: 448px; /* 배너 높이 설정 */
+}
+
+/* 화면 너비가 1500px 이상일 때의 스타일 */
+@media (min-width: 1500px) {
+  .banner {
+    position: relative; /* 배너 위치를 상대적으로 설정 */
+    height: 600px; /* 배너 높이를 600px로 설정 */
+  }
+  .banner--fadeBottom {
+    position: absolute; /* 배너 하단 페이드 효과를 절대 위치로 설정 */
+    bottom: 0; /* 배너의 하단에 위치 */
+    width: 100%; /* 배너 너비를 100%로 설정 */
+    height: 40rem; /* 배너 높이를 40rem로 설정 */
+  }
+}
+
+/* 화면 너비가 768px 이하일 때의 스타일 */
+@media (max-width: 768px) {
+  .banner__contents {
+    width: min-content !important; /* 내용의 최소 너비를 사용 */
+    padding-left: 2.3rem; /* 왼쪽 여백 설정 */
+    margin-left: 0px !important; /* 왼쪽 여백을 없앰 */
+  }
+  .banner__description {
+    font-size: 0.8rem !important; /* 글자 크기를 작게 설정 */
+    width: auto !important; /* 너비를 자동으로 설정 */
+  }
+  .info {
+    text-align: start; /* 텍스트 정렬을 시작 위치로 설정 */
+    padding-right: 1.2rem; /* 오른쪽 여백 설정 */
+  }
+  .space {
+    margin-left: 6px; /* 왼쪽 여백 설정 */
+  }
+  .banner__button {
+    font-size: 0.8rem !important; /* 버튼 글자 크기를 작게 설정 */
+    border-radius: 4px !important; /* 버튼의 모서리를 둥글게 설정 */
+  }
+}
+
+/* 배너 내용 스타일 */
+.banner__contents {
+  margin-left: 40px; /* 왼쪽 여백 설정 */
+  padding-top: 140px; /* 상단 여백 설정 */
+  height: 190px; /* 높이 설정 */
+}
+
+/* 배너 제목 스타일 */
+.banner__title {
+  font-size: 3rem; /* 글자 크기를 크게 설정 */
+  font-weight: 800; /* 글자 두께를 굵게 설정 */
+  padding-bottom: 0.5rem; /* 아래쪽 여백 설정 */
+}
+
+/* 배너 설명 스타일 */
+.banner__description {
+  width: 45rem; /* 너비 설정 */
+  line-height: 1.3; /* 줄 간격 설정 */
+  padding-top: 1rem; /* 위쪽 여백 설정 */
+  font-weight: 500; /* 글자 두께 설정 */
+  font-size: 1rem; /* 글자 크기 설정 */
+  max-width: 400px; /* 최대 너비 설정 */
+  height: 80px; /* 높이 설정 */
+}
+
+/* 배너 하단 페이드 효과 스타일 */
+.banner--fadeBottom {
+  height: 7.4rem; /* 높이 설정 */
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  ); /* 그라데이션 배경 이미지 설정 */
+}
+
+/* 배너 버튼 컨테이너 스타일 */
+.banner__buttons {
+  display: flex; /* 플렉스 박스로 설정 */
+  flex-direction: row; /* 가로 방향으로 배치 */
+}
+
+/* 배너 버튼 스타일 */
+.banner__button {
+  display: flex; /* 플렉스 박스로 설정 */
+  flex-direction: row; /* 가로 방향으로 배치 */
+  justify-content: start; /* 시작 부분에 정렬 */
+  align-items: center; /* 중앙에 정렬 */
+  cursor: pointer; /* 커서를 포인터로 변경 */
+  outline: none; /* 외곽선 없애기 */
+  border: none; /* 테두리 없애기 */
+  font-size: 1rem; /* 글자 크기 설정 */
+  font-weight: 700; /* 글자 두께 설정 */
+  border-radius: 0.2vw; /* 모서리를 둥글게 설정 */
+  padding: 0.4rem 1.8rem 0.4rem 1rem; /* 안쪽 여백 설정 */
+  margin-right: 1rem; /* 오른쪽 여백 설정 */
+}
+
+/* 배너 버튼 호버 효과 */
+.banner__button:hover {
+  color: #000; /* 글자 색상을 검은색으로 변경 */
+  background-color: rgba(170, 170, 170, 0.9); /* 배경 색상을 회색으로 변경 */
+  transition: all 0.2s; /* 모든 속성에 대해 0.2초 동안 전환 */
+}
+
+/* 재생 버튼 스타일 */
+.play {
+  background-color: white; /* 배경 색상을 흰색으로 설정 */
+  color: black; /* 글자 색상을 검은색으로 설정 */
+}
+
+/* 정보 버튼 스타일 */
+.info {
+  background-color: rgba(109, 109, 110, 0.7); /* 배경 색상을 회색으로 설정 */
+  color: white; /* 글자 색상을 흰색으로 설정 */
+}
+
+/* 정보 버튼 호버 효과 */
+.info:hover {
+  background-color: rgb(74, 74, 74); /* 배경 색상을 어두운 회색으로 변경 */
+  color: white; /* 글자 색상을 흰색으로 유지 */
+}
+
+/* 공간 스타일 */
+.space {
+  margin-left: 4px; /* 왼쪽 여백 설정 */
+}
